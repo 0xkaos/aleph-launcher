@@ -5,36 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlephBetical</title>
     <style>
+        /* Base styling for the entire page */
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f9;
-            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* Light, serene background */
+            font-family: 'Courier New', monospace; /* Changed to a more 'coding' feel */
             margin: 0;
+            padding: 0;
         }
+
+        /* Styling for the main title */
         h1 {
             color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Adds a subtle shadow for depth */
+            font-size: 2.5em;
+            letter-spacing: 2px;
         }
+
+        /* Button-like links */
         a {
             margin: 10px;
             padding: 15px 30px;
             color: white;
-            background-color: #007bff;
+            background-color: #007bff; /* Bright blue for vibrant action */
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth with shadow */
+            font-size: 1.1em;
         }
+
+        /* Hover effect for links */
         a:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
         }
     </style>
 </head>
 <body>
     <h1>AlephBetical</h1>
     <a href="https://flashcards.alephbetical.com">Flashcards</a>
-    <a href="https://verbs.alephbetical.com">Verb congugation</a>
+    <a href="https://verbs.alephbetical.com">Verb Conjugation</a>
 </body>
 </html>
