@@ -5,45 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlephBetical</title>
     <style>
+        /* Root variables for consistency with the other page */
+        :root {
+            --font-family: 'Varela Round', Arial, sans-serif;
+            --background-color: #F0F1F4;
+            --background-image: linear-gradient(to bottom, #F0F1F4, #e0e0e0);
+            --text-color: #333;
+            --primary-color: #364991;
+            --accent-color: #ff6600;
+            --container-bg: #fff;
+            --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --button-bg: #e7e7e7;
+            --button-border: #bbb;
+            --button-text-color: #333;
+        }
+
+        /* Dark mode adjustments */
+        body.dark-mode {
+            --background-color: #121212;
+            --background-image: none;
+            --text-color: #e0e0e0;
+            --container-bg: rgba(30, 30, 30, 0.9);
+            --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            --button-bg: #444;
+            --button-border: #555;
+            --button-text-color: #e0e0e0;
+            --primary-color: #8fb0d6; /* Adjusted for dark mode readability */
+            --accent-color: #8fb0d6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         /* Base styling for the entire page */
         body {
+            font-family: var(--font-family);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f9; /* Light, serene background */
-            font-family: 'Courier New', monospace; /* Changed to a more 'coding' feel */
-            margin: 0;
-            padding: 0;
+            min-height: 100vh;
+            background-color: var(--background-color);
+            background-image: var(--background-image);
+            color: var(--text-color);
+            padding: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* Styling for the main title */
         h1 {
-            color: #333;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Adds a subtle shadow for depth */
+            font-family: var(--font-family);
+            color: var(--primary-color);
             font-size: 2.5em;
-            letter-spacing: 2px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 6px rgba(54, 73, 145, 0.2); /* Subtle shadow for depth */
+            transition: color 0.3s ease;
         }
 
         /* Button-like links */
         a {
-            margin: 10px;
-            padding: 15px 30px;
-            color: white;
-            background-color: #007bff; /* Bright blue for vibrant action */
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 35px;
+            color: var(--button-text-color);
+            background-color: var(--button-bg);
             text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease; /* Smooth transition for all properties */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth with shadow */
-            font-size: 1.1em;
+            border: 1px solid var(--button-border);
+            border-radius: 8px; /* Consistent with the other page */
+            font-size: 1.2em;
+            font-weight: 500;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease; /* Smooth transitions */
         }
 
         /* Hover effect for links */
         a:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
             transform: translateY(-2px); /* Slight lift effect */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+            box-shadow: 0 4px 10px rgba(54, 73, 145, 0.3); /* Enhanced shadow */
+        }
+
+        body.dark-mode a:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 10px rgba(143, 176, 214, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+
+            a {
+                padding: 12px 25px;
+                font-size: 1em;
+                margin: 10px;
+            }
         }
     </style>
 </head>
